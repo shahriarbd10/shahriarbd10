@@ -19,7 +19,7 @@
 
 <div align="center">
   <img src="https://img.shields.io/badge/Location-Dhaka%2C%20Bangladesh-0ea5e9?style=for-the-badge&logo=google-maps&logoColor=white"/>
-  <a href="https://xfishery.com"><img src="https://img.shields.io/badge/Portfolio-xfishery.com-a855f7?style=for-the-badge&logo=google-chrome&logoColor=white"/></a>
+  <a href="https://shahriarbd10.github.io"><img src="https://img.shields.io/badge/Portfolio-shahriarbd10.github.io-a855f7?style=for-the-badge&logo=google-chrome&logoColor=white"/></a>
   <a href="mailto:shahriarsgr@gmail.com"><img src="https://img.shields.io/badge/Email-Contact-ef4444?style=for-the-badge&logo=gmail&logoColor=white"/></a>
 </div>
 
@@ -100,7 +100,7 @@ I specialize in building scalable dashboards, APIs, and smart IoT architectures 
   <a href="mailto:shahriarsgr@gmail.com"><img src="https://img.shields.io/badge/Email-ef4444?style=for-the-badge&logo=gmail&logoColor=white"/></a>
   <a href="https://linkedin.com/in/shahriarhossain"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
   <a href="https://github.com/shahriarbd10"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
-  <a href="https://xfishery.com"><img src="https://img.shields.io/badge/Portfolio-0ea5e9?style=for-the-badge&logo=google-chrome&logoColor=white"/></a>
+  <a href="https://shahriarbd10.github.io"><img src="https://img.shields.io/badge/Portfolio-0ea5e9?style=for-the-badge&logo=google-chrome&logoColor=white"/></a>
 </div>
 
 ---
