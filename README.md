@@ -1,8 +1,8 @@
 <!-- Profile README for shahriarbd10 -->
-<!-- Polished version focused on IoT, SaaS, and Cloud Engineering -->
+<!-- Clean, professional, and human-aligned version -->
 
 <div align="center">
-  <svg viewBox="0 0 1200 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shahriar Hossain (shahriarbd10) — Full-Stack Developer, IoT & Cloud" style="width:100%;height:auto;max-height:220px;">
+  <svg viewBox="0 0 1200 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shahriar Hossain (shahriarbd10) – Full-Stack Developer, IoT & Cloud" style="width:100%;height:auto;max-height:220px;">
     <defs>
       <linearGradient id="bgGrad" x1="0" x2="1" y1="0" y2="0">
         <stop stop-color="#0ea5e9" offset="0%"/>
@@ -13,7 +13,7 @@
     <path d="M0,150 C240,190 460,110 720,150 C980,190 1100,120 1200,160 L1200,220 L0,220 Z" fill="rgba(255,255,255,0.1)"/>
     <text x="50%" y="110" text-anchor="middle" fill="#fff" font-size="40" font-weight="800">Shahriar Hossain</text>
     <text x="50%" y="145" text-anchor="middle" fill="#e2e8f0" font-size="18">(shahriarbd10)</text>
-    <text x="50%" y="172" text-anchor="middle" fill="#f9fafb" font-size="15">Full-Stack Developer • IoT & Cloud • Node.js & AWS</text>
+    <text x="50%" y="172" text-anchor="middle" fill="#f9fafb" font-size="15">Full Stack Developer | IoT & Cloud | Node.js & AWS</text>
   </svg>
 </div>
 
@@ -26,20 +26,23 @@
 ---
 
 ## 👨‍💻 About Me
-💡 Full-Stack Developer and IoT Engineer passionate about connecting the **physical world** with **real-time cloud systems**.  
-I specialize in building scalable dashboards, APIs, and smart IoT architectures that transform data into actionable insights.
+Hi! I’m **Shahriar Hossain**, a Full Stack Developer and IoT Engineer from Dhaka, Bangladesh.  
+I’m passionate about connecting hardware with cloud systems to build real-time, intelligent solutions that help automate everyday challenges.
 
-- 🔭 **Currently Working On:**  
-  - Expanding **MediTrack SaaS** with analytics and multi-tenant scalability  
-  - Deploying **Xfishery IoT Dashboard** with secure cloud-to-device pipelines  
-- 🧠 **Learning & Exploring:**  
-  - Next.js 15 • Edge Functions • TypeScript scalability patterns  
-  - Serverless APIs & AWS automation  
-- 🎯 **Goal:** Build next-gen automation tools that combine **IoT, AI, and Cloud orchestration**
+### What I’m working on
+- Scaling **MediTrack SaaS** with analytics and multi-tenant management  
+- Deploying **Xfishery IoT Dashboard** for real-time sensor data and cloud monitoring  
+
+### Exploring & Learning
+- Next.js 15, Edge Functions, and TypeScript best practices  
+- Serverless architecture and AWS automation  
+
+### My focus
+To build products that bridge IoT, AI, and Cloud computing—making automation smarter, faster, and more accessible.
 
 ---
 
-## ⚙️ Tech Stack (Core Tools)
+## ⚙️ Tech Stack
 <div align="center">
   <img src="https://skillicons.dev/icons?i=js,react,nodejs,express,mongodb,aws,nginx,arduino,git,vscode" />
 </div>
@@ -48,17 +51,23 @@ I specialize in building scalable dashboards, APIs, and smart IoT architectures 
 
 ## 🚀 Featured Projects
 
-### 🐟 [Xfishery IoT Dashboard](https://xfishery.com)
-> Real-time aquaculture monitoring — pH, DO, temperature & ammonia via ESP32 sensors.  
-> **Stack:** Node.js • React • WebSockets/MQTT • MongoDB • AWS EC2 • Nginx HTTPS
+### 🐟 Xfishery IoT Dashboard  
+[🌐 Visit Website](https://xfishery.com) • [🎥 View Dashboard Demo]([https://www.linkedin.com/posts/YOUR-LINKEDIN-POST-ID](https://www.linkedin.com/posts/shahriarbd10_iot-aquaculture-smartaquaculture-activity-7386217565359915008-tkKs?utm_source=share&utm_medium=member_desktop&rcm=ACoAADfrapgBYApVh6EYu0TlH_b_ln-SZAAozBA))
+
+Real-time aquaculture monitoring system tracking pH, dissolved oxygen, temperature, and ammonia levels using ESP32 sensors.  
+**Stack:** Node.js, React, WebSockets/MQTT, MongoDB, AWS EC2, Nginx
+
+---
 
 ### 💊 [MediTrack Pharmacy SaaS](https://meditrack-v1.vercel.app)
-> Multi-role SaaS platform for pharmacies — stock, billing, and dashboards.  
-> **Stack:** MERN • JWT Auth • Cloud APIs • AWS EC2
+A multi-role SaaS platform for pharmacies with inventory, billing, and real-time dashboards.  
+**Stack:** MERN Stack, JWT Authentication, AWS EC2, Nginx HTTPS
+
+---
 
 ### ⚖️ [Lex.AI Legal Assistant](#)
-> AI chatbot offering legal guidance and workflow automation for professionals.  
-> *(Prototype in development)*
+An AI-based chatbot that automates legal guidance and workflow creation.  
+**Status:** In prototype stage
 
 ---
 
@@ -82,16 +91,16 @@ I specialize in building scalable dashboards, APIs, and smart IoT architectures 
 ---
 
 ## 🧩 Highlights
-- ⚙️ Built IoT dashboards powering **real-world aquaculture monitoring**  
-- 🌩 Integrated ESP32 sensors with **secure cloud APIs and WebSockets**  
-- 💼 Founder & **CTO @ Xfishery** – leading IoT and cloud data pipeline design  
-- 🧠 Strong focus on **UX, performance, and cloud reliability**
+- Developed IoT dashboards used for **real-world aquaculture automation**  
+- Integrated ESP32 sensors with **secure cloud APIs and MQTT communication**  
+- Founder & **CTO of Xfishery**, leading IoT and cloud data development  
+- Strong interest in **cloud scalability, performance, and user experience**
 
 ---
 
 ## 💬 Philosophy
-> “Code is art when it connects people, devices, and ideas.”  
-> – **Shahriar Hossain**
+> “Code is meaningful when it connects people, devices, and possibilities.”  
+> – Shahriar Hossain
 
 ---
 
@@ -113,6 +122,6 @@ I specialize in building scalable dashboards, APIs, and smart IoT architectures 
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Inter&size=20&duration=3000&pause=800&color=A855F7&center=true&vCenter=true&width=600&lines=Building+IoT+and+Full-Stack+Solutions;Automating+the+Future+with+Cloud+and+Sensors;Turning+Ideas+into+Actionable+Systems)](https://github.com/shahriarbd10)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Inter&size=20&duration=3000&pause=800&color=A855F7&center=true&vCenter=true&width=600&lines=Building+IoT+and+Full+Stack+Solutions;Automating+the+Future+with+Cloud+and+Sensors;Turning+Ideas+into+Actionable+Systems)](https://github.com/shahriarbd10)
 
 </div>
