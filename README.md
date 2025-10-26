@@ -99,7 +99,7 @@ An AI-powered chatbot simplifying legal workflow and documentation.
 ---
 
 ## 💬 Philosophy
-> “Technology is the bridge between curiosity and creation — and I love walking that bridge every day.”  
+> “Technology is the bridge between curiosity and creation and I love walking that bridge every day.”  
 > – Shahriar Hossain  
 
 ---
