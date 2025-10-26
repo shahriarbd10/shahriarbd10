@@ -30,7 +30,7 @@ Hey! I’m **Shahriar Hossain**, a **Full Stack Developer** and **technology ent
 I enjoy designing structured, maintainable, and performance-driven applications that blend creativity with logic.
 
 ### 🌱 Currently Exploring
-- Next.js 15 • TypeScript • Edge Functions  
+- Next.js 16 • TypeScript • Edge Functions  
 - Serverless APIs & Cloud architecture optimization  
 
 ### 💡 Interests
