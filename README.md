@@ -1,5 +1,5 @@
 <!-- Profile README for shahriarbd10 -->
-<!-- Designed for professional presentation with snake animation and clean stack -->
+<!-- Polished version focused on IoT, SaaS, and Cloud Engineering -->
 
 <div align="center">
   <svg viewBox="0 0 1200 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shahriar Hossain (shahriarbd10) — Full-Stack Developer, IoT & Cloud" style="width:100%;height:auto;max-height:220px;">
@@ -20,46 +20,49 @@
 <div align="center">
   <img src="https://img.shields.io/badge/Location-Dhaka%2C%20Bangladesh-0ea5e9?style=for-the-badge&logo=google-maps&logoColor=white"/>
   <a href="https://xfishery.com"><img src="https://img.shields.io/badge/Portfolio-xfishery.com-a855f7?style=for-the-badge&logo=google-chrome&logoColor=white"/></a>
-  <a href="mailto:shahriarsgr@gmail.com"><img src="https://img.shields.io/badge/Email-Say%20Hi-ef4444?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+  <a href="mailto:shahriarsgr@gmail.com"><img src="https://img.shields.io/badge/Email-Contact-ef4444?style=for-the-badge&logo=gmail&logoColor=white"/></a>
 </div>
 
 ---
 
 ## 👨‍💻 About Me
-💡 Full-Stack Developer and IoT Engineer passionate about **real-time cloud systems**, **sensor data**, and **scalable web apps**.  
-Currently focused on building intelligent SaaS solutions and IoT-based automation systems.
+💡 Full-Stack Developer and IoT Engineer passionate about connecting the **physical world** with **real-time cloud systems**.  
+I specialize in building scalable dashboards, APIs, and smart IoT architectures that transform data into actionable insights.
 
-- 🧠 Exploring **Next.js**, **Edge Functions**, and **AI-powered IoT analytics**  
-- 🔭 Founder of **Xfishery** – IoT aquaculture automation system  
-- 🧩 Creator of **MediTrack** – SaaS for pharmacy inventory & billing  
-- 🎯 Goal: Build products that blend **Hardware + Cloud Intelligence**
+- 🔭 **Currently Working On:**  
+  - Expanding **MediTrack SaaS** with analytics and multi-tenant scalability  
+  - Deploying **Xfishery IoT Dashboard** with secure cloud-to-device pipelines  
+- 🧠 **Learning & Exploring:**  
+  - Next.js 15 • Edge Functions • TypeScript scalability patterns  
+  - Serverless APIs & AWS automation  
+- 🎯 **Goal:** Build next-gen automation tools that combine **IoT, AI, and Cloud orchestration**
 
 ---
 
-## ⚙️ Tech Stack (Top Tools I Use)
+## ⚙️ Tech Stack (Core Tools)
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=js,react,nodejs,express,mongodb,aws,docker,nginx,arduino,git,vscode" />
+  <img src="https://skillicons.dev/icons?i=js,react,nodejs,express,mongodb,aws,nginx,arduino,git,vscode" />
 </div>
 
 ---
 
-## 🚀 Highlighted Projects
+## 🚀 Featured Projects
 
 ### 🐟 [Xfishery IoT Dashboard](https://xfishery.com)
 > Real-time aquaculture monitoring — pH, DO, temperature & ammonia via ESP32 sensors.  
-> Stack: Node.js • React • WebSockets/MQTT • MongoDB • Docker • AWS EC2
+> **Stack:** Node.js • React • WebSockets/MQTT • MongoDB • AWS EC2 • Nginx HTTPS
 
 ### 💊 [MediTrack Pharmacy SaaS](https://meditrack-v1.vercel.app)
-> Multi-role pharmacy system — Inventory, billing, and dashboards with role-based control.  
-> Stack: MERN • JWT Auth • AWS EC2 • Nginx HTTPS
+> Multi-role SaaS platform for pharmacies — stock, billing, and dashboards.  
+> **Stack:** MERN • JWT Auth • Cloud APIs • AWS EC2
 
 ### ⚖️ [Lex.AI Legal Assistant](#)
-> AI chatbot that provides legal workflows and templates for Bangladeshi users.  
-> *(Prototype Stage)*
+> AI chatbot offering legal guidance and workflow automation for professionals.  
+> *(Prototype in development)*
 
 ---
 
-## 📊 GitHub Activity
+## 📊 GitHub Analytics
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=shahriarbd10&show_icons=true&theme=radical&hide_border=true&border_radius=12" height="150" />
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=shahriarbd10&theme=radical&hide_border=true&border_radius=12" height="150" />
@@ -78,16 +81,16 @@ Currently focused on building intelligent SaaS solutions and IoT-based automatio
 
 ---
 
-## 🏆 Achievements
-- 🥇 Completed **Dhaka International Marathon 2025** (10 km, 55 min)  
-- 💼 **CTO @ Xfishery** — led real-time analytics & cloud pipeline design  
-- ⚙️ Developed multi-sensor IoT dashboards used in **real aquaculture sites**  
-- 🧠 Mentored peers in IoT data processing & system optimization  
+## 🧩 Highlights
+- ⚙️ Built IoT dashboards powering **real-world aquaculture monitoring**  
+- 🌩 Integrated ESP32 sensors with **secure cloud APIs and WebSockets**  
+- 💼 Founder & **CTO @ Xfishery** – leading IoT and cloud data pipeline design  
+- 🧠 Strong focus on **UX, performance, and cloud reliability**
 
 ---
 
-## 🎯 Philosophy
-> “I don’t just build software — I design systems that think, connect, and evolve.”  
+## 💬 Philosophy
+> “Code is art when it connects people, devices, and ideas.”  
 > – **Shahriar Hossain**
 
 ---
@@ -110,6 +113,6 @@ Currently focused on building intelligent SaaS solutions and IoT-based automatio
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Inter&size=20&duration=3000&pause=800&color=A855F7&center=true&vCenter=true&width=600&lines=Building+IoT+and+Full-Stack+Solutions;Exploring+Cloud+Automation;Turning+Data+into+Impact)](https://github.com/shahriarbd10)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Inter&size=20&duration=3000&pause=800&color=A855F7&center=true&vCenter=true&width=600&lines=Building+IoT+and+Full-Stack+Solutions;Automating+the+Future+with+Cloud+and+Sensors;Turning+Ideas+into+Actionable+Systems)](https://github.com/shahriarbd10)
 
 </div>
