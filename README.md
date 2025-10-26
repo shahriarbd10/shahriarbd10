@@ -1,8 +1,8 @@
 <!-- Profile README for shahriarbd10 -->
-<!-- Clean, professional, and human-aligned version -->
+<!-- Human-aligned version: clean, personal, and professional -->
 
 <div align="center">
-  <svg viewBox="0 0 1200 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shahriar Hossain (shahriarbd10) – Full-Stack Developer, IoT & Cloud" style="width:100%;height:auto;max-height:220px;">
+  <svg viewBox="0 0 1200 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shahriar Hossain (shahriarbd10) — Full Stack Developer | IoT & Cloud" style="width:100%;height:auto;max-height:220px;">
     <defs>
       <linearGradient id="bgGrad" x1="0" x2="1" y1="0" y2="0">
         <stop stop-color="#0ea5e9" offset="0%"/>
@@ -27,18 +27,18 @@
 
 ## 👨‍💻 About Me
 Hi! I’m **Shahriar Hossain**, a Full Stack Developer and IoT Engineer from Dhaka, Bangladesh.  
-I’m passionate about connecting hardware with cloud systems to build real-time, intelligent solutions that help automate everyday challenges.
+I build real-time dashboards, strong APIs, and connected systems that help hardware and cloud talk.
 
 ### What I’m working on
-- Scaling **MediTrack SaaS** with analytics and multi-tenant management  
-- Deploying **Xfishery IoT Dashboard** for real-time sensor data and cloud monitoring  
+- Scaling **MediTrack SaaS** for analytics and multi-tenant usage  
+- Deploying **Xfishery IoT Dashboard** for aquaculture sensor tracking  
 
 ### Exploring & Learning
-- Next.js 15, Edge Functions, and TypeScript best practices  
-- Serverless architecture and AWS automation  
+- Next.js 15, Edge Functions, TypeScript best practices  
+- Serverless patterns and AWS automation  
 
-### My focus
-To build products that bridge IoT, AI, and Cloud computing—making automation smarter, faster, and more accessible.
+### My aim
+To build tools that combine IoT, AI, and Cloud in ways that make automation smarter and simpler.
 
 ---
 
@@ -52,22 +52,21 @@ To build products that bridge IoT, AI, and Cloud computing—making automation s
 ## 🚀 Featured Projects
 
 ### 🐟 Xfishery IoT Dashboard  
-[🌐 Visit Website](https://xfishery.com) • [🎥 View Dashboard Demo]([https://www.linkedin.com/posts/YOUR-LINKEDIN-POST-ID](https://www.linkedin.com/posts/shahriarbd10_iot-aquaculture-smartaquaculture-activity-7386217565359915008-tkKs?utm_source=share&utm_medium=member_desktop&rcm=ACoAADfrapgBYApVh6EYu0TlH_b_ln-SZAAozBA))
-
-Real-time aquaculture monitoring system tracking pH, dissolved oxygen, temperature, and ammonia levels using ESP32 sensors.  
-**Stack:** Node.js, React, WebSockets/MQTT, MongoDB, AWS EC2, Nginx
-
----
-
-### 💊 [MediTrack Pharmacy SaaS](https://meditrack-v1.vercel.app)
-A multi-role SaaS platform for pharmacies with inventory, billing, and real-time dashboards.  
-**Stack:** MERN Stack, JWT Authentication, AWS EC2, Nginx HTTPS
+[🌐 Visit Website](https://xfishery.com) • [🎥 Demo Post](https://www.linkedin.com/posts/shahriarbd10_iot-aquaculture-smartaquaculture-activity-7386217565359915008-tkKs?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADfrapgBYApVh6EYu0TlH_b_ln-SZAAozBA)  
+Real-time aquaculture monitoring system tracking pH, dissolved oxygen, temperature, and ammonia via ESP32 sensors.  
+**Stack:** Node.js · React · WebSockets/MQTT · MongoDB · AWS EC2 · Nginx HTTPS
 
 ---
 
-### ⚖️ [Lex.AI Legal Assistant](#)
-An AI-based chatbot that automates legal guidance and workflow creation.  
-**Status:** In prototype stage
+### 💊 [MediTrack Pharmacy SaaS](https://meditrack-v1.vercel.app)  
+A multi-role SaaS platform for pharmacies to manage inventory, billing, and dashboards.  
+**Stack:** MERN Stack · JWT Auth · Cloud APIs · AWS EC2
+
+---
+
+### ⚖️ [Lex.AI Legal Assistant](#)  
+An AI-driven chatbot that helps professionals with legal workflow automation and templates.  
+*(Prototype phase)*
 
 ---
 
@@ -91,16 +90,16 @@ An AI-based chatbot that automates legal guidance and workflow creation.
 ---
 
 ## 🧩 Highlights
-- Developed IoT dashboards used for **real-world aquaculture automation**  
-- Integrated ESP32 sensors with **secure cloud APIs and MQTT communication**  
-- Founder & **CTO of Xfishery**, leading IoT and cloud data development  
-- Strong interest in **cloud scalability, performance, and user experience**
+- Designed IoT dashboards used in real-world aquaculture automation  
+- Integrated ESP32 sensors with secure cloud APIs and WebSockets  
+- Founder & CTO at Xfishery, leading IoT & cloud data design  
+- Focused on delivering performance, strong UX, and reliability
 
 ---
 
 ## 💬 Philosophy
-> “Code is meaningful when it connects people, devices, and possibilities.”  
-> – Shahriar Hossain
+“Code is meaningful when it connects people, devices, and possibilities.”  
+– Shahriar Hossain
 
 ---
 
@@ -121,7 +120,5 @@ An AI-based chatbot that automates legal guidance and workflow creation.
 ---
 
 <div align="center">
-
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Inter&size=20&duration=3000&pause=800&color=A855F7&center=true&vCenter=true&width=600&lines=Building+IoT+and+Full+Stack+Solutions;Automating+the+Future+with+Cloud+and+Sensors;Turning+Ideas+into+Actionable+Systems)](https://github.com/shahriarbd10)
-
 </div>
