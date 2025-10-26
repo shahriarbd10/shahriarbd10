@@ -1,8 +1,5 @@
-<!-- Profile README for shahriarbd10 -->
-<!-- Software Engineer–oriented version: clean, authentic, and professional -->
-
 <div align="center">
-  <svg viewBox="0 0 1200 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shahriar Hossain (shahriarbd10) – Software Engineer | Full Stack | Cloud Systems" style="width:100%;height:auto;max-height:220px;">
+  <svg viewBox="0 0 1200 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shahriar Hossain (shahriarbd10) — Full Stack Developer | Cloud & IoT" style="width:100%;height:auto;max-height:220px;">
     <defs>
       <linearGradient id="bgGrad" x1="0" x2="1" y1="0" y2="0">
         <stop stop-color="#0ea5e9" offset="0%"/>
@@ -13,7 +10,7 @@
     <path d="M0,150 C240,190 460,110 720,150 C980,190 1100,120 1200,160 L1200,220 L0,220 Z" fill="rgba(255,255,255,0.1)"/>
     <text x="50%" y="110" text-anchor="middle" fill="#fff" font-size="40" font-weight="800">Shahriar Hossain</text>
     <text x="50%" y="145" text-anchor="middle" fill="#e2e8f0" font-size="18">(shahriarbd10)</text>
-    <text x="50%" y="172" text-anchor="middle" fill="#f9fafb" font-size="15">Software Engineer | Full Stack | Cloud & IoT Systems</text>
+    <text x="50%" y="172" text-anchor="middle" fill="#f9fafb" font-size="15">Full Stack Developer | Cloud & IoT Enthusiast</text>
   </svg>
 </div>
 
@@ -26,50 +23,49 @@
 ---
 
 ## 👨‍💻 About Me
-Hi! I’m **Shahriar Hossain**, a Software Engineer passionate about building scalable, maintainable, and performance-driven systems.  
-I enjoy working across the full stack—from designing clean backends and APIs to creating fluid user experiences and real-time data visualizations.
+Hi! I’m **Shahriar Hossain**, a passionate Full Stack Developer from Dhaka, Bangladesh.  
+I love building web applications that are fast, user-friendly, and scalable.  
+Alongside web development, I enjoy exploring **cloud systems** and integrating **IoT devices** with modern software platforms.
 
 ### What I’m working on
-- Extending **MediTrack SaaS** with analytics and enterprise-ready architecture  
-- Improving **Xfishery Cloud Dashboard** for large-scale IoT data handling  
+- Improving **MediTrack SaaS** with analytics and better multi-user access  
+- Enhancing **Xfishery Dashboard** for real-time data visualization and performance  
 
 ### Exploring & Learning
-- Next.js 15 • Edge Functions • TypeScript Patterns  
-- DevOps workflow, Cloud CI/CD, and AWS Automation  
+- Next.js 15 • Edge Functions • TypeScript patterns  
+- AWS automation, APIs, and backend optimization  
 
 ### My Focus
-Delivering **production-grade applications** with strong architecture, reusable components, and efficient cloud deployment pipelines.
+Developing reliable, maintainable, and efficient applications that bridge technology and real-world use.
 
 ---
 
 ## ⚙️ Tech Stack
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=js,ts,react,nodejs,express,mongodb,aws,nginx,arduino,git,vscode" />
+  <img src="https://skillicons.dev/icons?i=js,react,nodejs,express,mongodb,aws,nginx,arduino,git,vscode" />
 </div>
 
 ---
 
 ## 🚀 Featured Projects
 
-### 🐟 Xfishery Cloud Dashboard  
+### 🐟 Xfishery Dashboard  
 [🌐 Visit Website](https://xfishery.com) • [🎥 Demo Post](https://www.linkedin.com/posts/shahriarbd10_iot-aquaculture-smartaquaculture-activity-7386217565359915008-tkKs?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADfrapgBYApVh6EYu0TlH_b_ln-SZAAozBA)  
-An IoT-integrated cloud platform for monitoring aquaculture environments with real-time sensor data (pH, DO, temperature, ammonia).  
-**Role:** CTO – responsible for cloud architecture, backend logic, and deployment strategy.  
-**Stack:** Node.js • React • WebSockets/MQTT • MongoDB • AWS EC2 • Nginx
+A real-time aquaculture monitoring platform connecting sensors and dashboards for smarter aquafarming.  
+**Stack:** Node.js • React • WebSockets/MQTT • MongoDB • AWS EC2 • Nginx HTTPS  
 
 ---
 
 ### 💊 [MediTrack Pharmacy SaaS](https://meditrack-v1.vercel.app)  
-A multi-tenant SaaS platform for pharmacies with inventory, billing, and analytics modules.  
+A SaaS web application for pharmacies to manage inventory, sales, and dashboards with role-based access.  
 **Stack:** MERN Stack • JWT Auth • Cloud APIs • AWS EC2  
-**Focus:** Optimized backend workflows, modular React architecture, and admin analytics.
 
 ---
 
 ### ⚖️ [Lex.AI Legal Assistant](#)  
-AI-powered platform for workflow automation and legal guidance.  
-**Role:** Co-Founder – built conversational logic and backend integration for legal process automation.  
-*(Currently in prototype phase)*
+An AI-powered chatbot that assists users with legal workflows and templates.  
+**Role:** Co-Founder — developed backend integration and conversational logic.  
+*(Currently in prototype stage)*  
 
 ---
 
@@ -93,17 +89,17 @@ AI-powered platform for workflow automation and legal guidance.
 ---
 
 ## 🧩 Highlights
-- Engineered **IoT-driven cloud dashboards** integrated with scalable APIs  
-- Experienced in **RESTful architecture**, **real-time communication**, and **data pipelines**  
-- Serving as **CTO at Xfishery**, leading development and deployment architecture  
-- **Co-Founder at Lex.AI**, focusing on AI workflow logic and automation pipelines  
-- Strong emphasis on **performance optimization**, **security**, and **clean code practices**
+- Built dashboards combining **frontend performance and backend efficiency**  
+- Integrated **ESP32** sensors into real-time cloud applications  
+- Serving as **CTO at Xfishery**, leading web and data architecture design  
+- **Co-Founder at Lex.AI**, focusing on API integration and AI-driven workflows  
+- Enthusiastic about **scalable app architecture** and **UI/UX simplicity**
 
 ---
 
 ## 💬 Philosophy
-> “Great software connects logic with impact — every line should serve a purpose.”  
-> – Shahriar Hossain
+> “Every project is a chance to learn, improve, and create value through code.”  
+> – Shahriar Hossain  
 
 ---
 
@@ -124,5 +120,5 @@ AI-powered platform for workflow automation and legal guidance.
 ---
 
 <div align="center">
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Inter&size=20&duration=3000&pause=800&color=A855F7&center=true&vCenter=true&width=600&lines=Designing+Scalable+Software+Systems;Building+Cloud+Ready+Applications;Turning+Ideas+into+Reliable+Products)](https://github.com/shahriarbd10)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Inter&size=20&duration=3000&pause=800&color=A855F7&center=true&vCenter=true&width=600&lines=Creating+Scalable+Full+Stack+Applications;Exploring+Cloud+Integration+and+Automation;Turning+Ideas+into+Real+Projects)](https://github.com/shahriarbd10)
 </div>
