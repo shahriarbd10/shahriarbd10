@@ -1,0 +1,54 @@
+name: Update Streak (Gist cache)
+
+on:
+  push:
+    branches: [ main, master ]
+  schedule:
+    - cron: "0 3 * * *"   # daily 03:00 UTC
+  workflow_dispatch: {}
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ensure jq is available (usually already installed)
+        run: |
+          if ! command -v jq >/dev/null 2>&1; then
+            sudo apt-get update -y && sudo apt-get install -y jq
+          fi
+
+      - name: Download streak SVG (with retries)
+        run: |
+          URL="https://streak-stats.demolab.com?user=shahriarbd10&theme=radical&hide_border=true&border_radius=12"
+          for i in 1 2 3 4 5; do
+            echo "Attempt $i..."
+            curl -fsSL "$URL" -o streak.svg && break
+            sleep $((2**i))
+          done
+
+          # Basic checks
+          if [ ! -s streak.svg ]; then
+            echo "Empty SVG, abort update"
+            exit 0
+          fi
+          if ! grep -q "<svg" streak.svg; then
+            echo "Not an SVG, abort update"
+            exit 0
+          fi
+          if grep -qi "Failed to retrieve contributions" streak.svg; then
+            echo "Service error page detected; abort update"
+            exit 0
+          fi
+
+      - name: Upload to Gist
+        env:
+          # 👇 Put your REAL gist id here, NO angle brackets
+          GIST_ID: 08ac5aefc9c72f680701d8239a0eb2a5
+          GH_TOKEN: ${{ secrets.GIST_TOKEN }}
+        run: |
+          jq -n --arg c "$(cat streak.svg)" '{files:{"streak.svg":{"content":$c}}}' > body.json
+          curl -fsSL -X PATCH \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/gists/${GIST_ID}" \
+            -d @body.json
