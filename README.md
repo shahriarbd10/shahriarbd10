@@ -6,7 +6,8 @@
 -->
 
 <!-- ==============================
-     🔍 SEO Meta Tags (For Google)
+     🔍 (Note) Meta tags don't affect GitHub README SEO,
+     but keeping them here is harmless for portability.
 ============================== -->
 <meta name="title" content="Shahriar Hossain (shahriarbd10) - Full Stack Developer & Tech Enthusiast" />
 <meta name="description" content="Shahriar Hossain (shahriarbd10) — Full Stack Developer, Cloud Learner & IoT Innovator from Dhaka, Bangladesh. Building scalable SaaS systems, real-time dashboards & automation platforms." />
@@ -32,16 +33,32 @@
     <text x="50%" y="135" text-anchor="middle" fill="#e2e8f0" font-size="18">(shahriarbd10)</text>
     <text x="50%" y="168" text-anchor="middle" fill="#f9fafb" font-size="15">Full Stack Developer | Tech Enthusiast | Cloud Learner</text>
   </svg>
-  <hr style="border: 0; height: 1px; background: linear-gradient(90deg, #0ea5e9, #a855f7, #0ea5e9); margin: 20px 0; width: 60%;">
+  <!-- 🔹 Classy thin gradient divider -->
+  <img alt="" src="https://img.shields.io/badge/-_-ffffff00.svg?style=for-the-badge&labelColor=0ea5e9&color=a855f7&logoWidth=0" style="margin: 8px 0; height: 6px; width: 60%; border-radius: 999px;">
 </div>
 
 <!-- ==============================
      📍 Profile Badges
 ============================== -->
 <div align="center">
-  <img src="https://img.shields.io/badge/Location-Dhaka%2C%20Bangladesh-0ea5e9?style=for-the-badge&logo=google-maps&logoColor=white"/>
-  <a href="https://github.com/shahriarbd10/shahriarbd10"><img src="https://img.shields.io/badge/GitHub-shahriarbd10-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
-  <a href="mailto:shahriarsgr@gmail.com"><img src="https://img.shields.io/badge/Email-Contact-ef4444?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+  <img src="https://img.shields.io/badge/Location-Dhaka%2C%20Bangladesh-0ea5e9?style=for-the-badge&logo=google-maps&logoColor=white" alt="Dhaka, Bangladesh"/>
+  <a href="https://github.com/shahriarbd10"><img src="https://img.shields.io/badge/GitHub-shahriarbd10-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub: shahriarbd10"/></a>
+  <a href="mailto:shahriarsgr@gmail.com"><img src="https://img.shields.io/badge/Email-Contact-ef4444?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
+</div>
+
+<!-- ==============================
+     🧭 Quick Links (new visual buttons)
+============================== -->
+<div align="center">
+  <a href="https://xfishery.com">
+    <img src="https://img.shields.io/badge/Xfishery-Dashboard-0ea5e9?style=for-the-badge&logo=azure-pipelines&logoColor=white" alt="Xfishery" />
+  </a>
+  <a href="https://meditrack-v1.vercel.app">
+    <img src="https://img.shields.io/badge/MediTrack-SaaS-a855f7?style=for-the-badge&logo=vercel&logoColor=white" alt="MediTrack" />
+  </a>
+  <a href="https://linkedin.com/in/shahriarbd10">
+    <img src="https://img.shields.io/badge/LinkedIn-Profile-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
 </div>
 
 ---
@@ -63,7 +80,16 @@ I love merging creativity with technology to craft **real-world products** that 
 
 ## ⚙️ Tech Stack
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=js,ts,react,nextjs,nodejs,express,mongodb,python,flutter,dart,aws,nginx,arduino,git,vscode" />
+  <img src="https://skillicons.dev/icons?i=js,ts,react,nextjs,nodejs,express,mongodb,python,flutter,dart,aws,nginx,arduino,git,vscode" alt="Tech stack icons" />
+</div>
+
+<!-- ==============================
+     ✨ Highlights at a Glance (new)
+============================== -->
+<div align="center">
+  <img src="https://img.shields.io/badge/Focus-SaaS%20%26%20IoT-1f2937?style=flat-square" alt="Focus"/>
+  <img src="https://img.shields.io/badge/Stack-MERN%20%7C%20MQTT%20%7C%20Nginx-1f2937?style=flat-square" alt="Stack"/>
+  <img src="https://img.shields.io/badge/Interests-DevOps%20%7C%20Edge%20%7C%20Analytics-1f2937?style=flat-square" alt="Interests"/>
 </div>
 
 ---
@@ -91,8 +117,16 @@ AI-featured platform simplifying legal workflows and document automation.
 
 ## 📊 GitHub Analytics
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=shahriarbd10&show_icons=true&theme=radical&hide_border=true&border_radius=12" height="150" />
-  <img src="https://streak-stats.demolab.com?user=shahriarbd10&theme=radical&hide_border=true&border_radius=12" height="150" />
+  <!-- Stats (remote) -->
+  <img src="https://github-readme-stats.vercel.app/api?username=shahriarbd10&show_icons=true&theme=radical&hide_border=true&border_radius=12" height="150" alt="GitHub stats" />
+
+  <!-- Streak (served from Gist cache — stable) -->
+  <img src="https://gist.githubusercontent.com/shahriarbd10/08ac5aefc9c72f680701d8239a0eb2a5/raw/streak.svg" height="150" alt="GitHub Streak (cached via Gist)" />
+</div>
+
+<!-- Optional: Top Languages (remove if you don't want it) -->
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=shahriarbd10&layout=compact&theme=radical&hide_border=true&border_radius=12" height="150" alt="Top languages" />
 </div>
 
 ---
@@ -125,15 +159,15 @@ AI-featured platform simplifying legal workflows and document automation.
 
 ## 🌐 Connect With Me
 <div align="center">
-  <a href="mailto:shahriarsgr@gmail.com"><img src="https://img.shields.io/badge/Email-ef4444?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-  <a href="https://linkedin.com/in/shahriarbd10"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-  <a href="https://github.com/shahriarbd10"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
+  <a href="mailto:shahriarsgr@gmail.com"><img src="https://img.shields.io/badge/Email-ef4444?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
+  <a href="https://linkedin.com/in/shahriarbd10"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+  <a href="https://github.com/shahriarbd10"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
 </div>
 
 ---
 
 <div align="center">
-  <img src="https://komarev.com/ghpvc/?username=shahriarbd10&label=Profile%20Views&style=for-the-badge&color=0ea5e9"/>
+  <img src="https://komarev.com/ghpvc/?username=shahriarbd10&label=Profile%20Views&style=for-the-badge&color=0ea5e9" alt="Profile views"/>
 </div>
 
 ---
