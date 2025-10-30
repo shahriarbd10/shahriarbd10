@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GH_USER: shahriarbd10
-      GIST_ID: 08ac5aefc9c72f680701d8239a0eb2a5
+      GIST_ID:"08ac5aefc9c72f680701d8239a0eb2a5"
       GIST_FILENAME: streak.svg
 
     steps:
