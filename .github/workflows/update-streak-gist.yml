@@ -10,6 +10,11 @@ on:
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    env:
+      GH_USER: shahriarbd10
+      GIST_ID: 08ac5aefc9c72f680701d8239a0eb2a5
+      GIST_FILENAME: streak.svg
+
     steps:
       - name: Ensure jq is available (usually already installed)
         run: |
@@ -17,32 +22,43 @@ jobs:
             sudo apt-get update -y && sudo apt-get install -y jq
           fi
 
+      - name: Who am I? (check token owner)
+        env:
+          GH_TOKEN: ${{ secrets.GIST_TOKEN }}
+        run: |
+          ME=$(curl -sS -H "Authorization: Bearer ${GH_TOKEN}" \
+                       -H "Accept: application/vnd.github+json" \
+                       https://api.github.com/user | jq -r '.login')
+          echo "Token owner: $ME"
+          if [ -z "$ME" ] || [ "$ME" = "null" ]; then
+            echo "❌ Invalid token (no user). Make sure GIST_TOKEN is a valid PAT."
+            exit 1
+          fi
+
       - name: Download streak SVG (with retries)
         run: |
-          URL="https://streak-stats.demolab.com?user=shahriarbd10&theme=radical&hide_border=true&border_radius=12"
-          for i in 1 2 3 4 5; do
+          URL="https://streak-stats.demolab.com?user=${GH_USER}&theme=radical&hide_border=true&border_radius=12"
+          for i in 1 2 3 4 5 6; do
             echo "Attempt $i..."
-            curl -fsSL "$URL" -o streak.svg && break
-            sleep $((2**i))
+            if curl -fsSL "$URL" -o "${GIST_FILENAME}"; then
+              break
+            fi
+            sleep $((2**i))  # 2,4,8,16,32,64s
           done
 
           # Basic checks
-          if [ ! -s streak.svg ]; then
-            echo "Empty SVG, abort update"
-            exit 0
+          if [ ! -s "${GIST_FILENAME}" ]; then
+            echo "Empty SVG, abort update"; exit 0
           fi
-          if ! grep -q "<svg" streak.svg; then
-            echo "Not an SVG, abort update"
-            exit 0
+          if ! grep -q "<svg" "${GIST_FILENAME}"; then
+            echo "Not an SVG, abort update"; exit 0
           fi
-          if grep -qi "Failed to retrieve contributions" streak.svg; then
-            echo "Service error page detected; abort update"
-            exit 0
+          if grep -qi "Failed to retrieve contributions" "${GIST_FILENAME}"; then
+            echo "Service error page detected; abort update"; exit 0
           fi
 
       - name: Check Gist access (preflight)
         env:
-          GIST_ID: 08ac5aefc9c72f680701d8239a0eb2a5   # <- your gist id (no angle brackets)
           GH_TOKEN: ${{ secrets.GIST_TOKEN }}
         run: |
           CODE=$(curl -sS -o resp.json -w "%{http_code}" \
@@ -51,23 +67,29 @@ jobs:
             "https://api.github.com/gists/${GIST_ID}")
           echo "GET /gists/${GIST_ID} -> HTTP ${CODE}"
           if [ "$CODE" != "200" ]; then
-            echo "Preflight failed. Most likely causes:"
-            echo " - Wrong GIST_ID (copy from https://gist.github.com/<you>/<id>)"
-            echo " - Token isn't from the same account as the gist owner"
-            echo " - Token missing 'gist' scope"
-            echo "Response body:"
+            echo "❌ Preflight failed. Likely wrong GIST_ID or missing gist scope."
             cat resp.json
             exit 1
           fi
-          echo "Gist owner & files:"
-          cat resp.json | jq -r '.owner.login, (.files | keys[])'
 
-      - name: Upload to Gist
+          OWNER=$(jq -r '.owner.login' resp.json)
+          echo "Gist owner: $OWNER"
+          if [ "$OWNER" != "${GH_USER}" ]; then
+            echo "❌ Token must belong to the gist owner (${GH_USER}). Current token owner differs."
+            exit 1
+          fi
+
+          echo "Files in gist:"
+          jq -r '(.files | keys[])' resp.json
+
+      - name: Upload latest SVG to gist
         env:
-          GIST_ID: 08ac5aefc9c72f680701d8239a0eb2a5
           GH_TOKEN: ${{ secrets.GIST_TOKEN }}
         run: |
-          jq -n --arg c "$(cat streak.svg)" '{files:{"streak.svg":{"content":$c}}}' > body.json
+          jq -n --arg c "$(cat "${GIST_FILENAME}")" \
+                --arg f "${GIST_FILENAME}" \
+                '{files:{($f):{content:$c}}}' > body.json
+
           echo "PATCH https://api.github.com/gists/${GIST_ID}"
           curl --fail-with-body -sS -X PATCH \
             -H "Authorization: Bearer ${GH_TOKEN}" \
