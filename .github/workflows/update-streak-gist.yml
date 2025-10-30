@@ -43,7 +43,7 @@ jobs:
       - name: Upload to Gist
         env:
           # 👇 Put your REAL gist id here, NO angle brackets
-          GIST_ID: 08ac5aefc9c72f680701d8239a0eb2a5
+          GIST_ID:"08ac5aefc9c72f680701d8239a0eb2a5"
           GH_TOKEN: ${{ secrets.GIST_TOKEN }}
         run: |
           jq -n --arg c "$(cat streak.svg)" '{files:{"streak.svg":{"content":$c}}}' > body.json
