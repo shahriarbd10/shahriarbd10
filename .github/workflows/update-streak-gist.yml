@@ -25,29 +25,34 @@ jobs:
             curl -fsSL "$URL" -o streak.svg && break
             sleep $((2**i))
           done
-
-          # Basic checks
           if [ ! -s streak.svg ]; then
-            echo "Empty SVG, abort update"
-            exit 0
+            echo "Empty SVG, abort update"; exit 0
           fi
           if ! grep -q "<svg" streak.svg; then
-            echo "Not an SVG, abort update"
-            exit 0
+            echo "Not an SVG, abort update"; exit 0
           fi
           if grep -qi "Failed to retrieve contributions" streak.svg; then
-            echo "Service error page detected; abort update"
-            exit 0
+            echo "Service error page detected; abort update"; exit 0
           fi
+
+      - name: Check Gist access (preflight)
+        env:
+          GIST_ID: 08ac5aefc9c72f680701d8239a0eb2a5
+          GH_TOKEN: ${{ secrets.GIST_TOKEN }}
+        run: |
+          echo "GET https://api.github.com/gists/${GIST_ID}"
+          curl -sS -H "Authorization: Bearer ${GH_TOKEN}" \
+               -H "Accept: application/vnd.github+json" \
+               "https://api.github.com/gists/${GIST_ID}" | jq -r '.id, .owner.login, (.files | keys[])'
 
       - name: Upload to Gist
         env:
-          # 👇 Put your REAL gist id here, NO angle brackets
-          GIST_ID:"08ac5aefc9c72f680701d8239a0eb2a5"
+          GIST_ID: 08ac5aefc9c72f680701d8239a0eb2a5
           GH_TOKEN: ${{ secrets.GIST_TOKEN }}
         run: |
           jq -n --arg c "$(cat streak.svg)" '{files:{"streak.svg":{"content":$c}}}' > body.json
-          curl -fsSL -X PATCH \
+          echo "PATCH https://api.github.com/gists/${GIST_ID}"
+          curl --fail-with-body -sS -X PATCH \
             -H "Authorization: Bearer ${GH_TOKEN}" \
             -H "Accept: application/vnd.github+json" \
             "https://api.github.com/gists/${GIST_ID}" \
