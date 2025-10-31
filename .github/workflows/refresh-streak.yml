@@ -2,59 +2,105 @@ name: Refresh Streak Card (Fail-Safe)
 
 on:
   schedule:
-    # Daily at 01:10 UTC → 07:10 Dhaka (UTC+6)
-    - cron: "10 1 * * *"
+    # Daily at 01:12 UTC → 07:12 Dhaka (UTC+6)
+    - cron: "12 1 * * *"
   workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-streak
+  cancel-in-progress: false
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write   # needed to push the updated SVG
+    env:
+      USERNAME: shahriarbd10
+      # Edit visual params if you like:
+      THEME: radical
+      HIDE_BORDER: "true"
+      BORDER_RADIUS: "12"
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Determine default branch (with fallback)
+        id: branch
+        shell: bash
+        run: |
+          # Try read from event context first
+          DEF="${{ github.event.repository.default_branch }}"
+          if [ -z "$DEF" ]; then
+            # Fallback via origin/HEAD
+            git fetch --quiet origin
+            DEF=$(git symbolic-ref --short refs/remotes/origin/HEAD 2>/dev/null | sed 's@^origin/@@')
+          fi
+          # Final fallback
+          if [ -z "$DEF" ]; then
+            if git rev-parse --verify origin/main >/dev/null 2>&1; then DEF=main;
+            elif git rev-parse --verify origin/master >/dev/null 2>&1; then DEF=master;
+            else DEF=main; fi
+          fi
+          echo "default=$DEF" >> "$GITHUB_OUTPUT"
+
       - name: Ensure assets folder
         run: mkdir -p assets
 
-      - name: Download latest streak.svg
-        id: fetch
+      - name: Try primary source (with retry + cache-buster)
+        id: primary
+        continue-on-error: true
+        shell: bash
         run: |
-          # Customize your look here (theme, border, etc.)
-          BASE="https://streak-stats.demolab.com"
-          QUERY="user=shahriarbd10&theme=radical&hide_border=true&border_radius=12"
-          # Add a cache-buster to avoid stale CDN responses
-          BUSTER="cachebuster=${GITHUB_RUN_ID}"
-          URL="${BASE}/?${QUERY}&${BUSTER}"
-
-          # Download to temp and sanity-check
-          curl -sS -L -o /tmp/streak.svg "${URL}"
-
-          if [ ! -s /tmp/streak.svg ] || ! grep -qi "<svg" /tmp/streak.svg; then
-            echo "ok=false" >> $GITHUB_OUTPUT
-            echo "⚠️  Download failed or not an SVG. Keeping previous cached file."
-          else
+          URL="https://streak-stats.demolab.com/?user=${USERNAME}&theme=${THEME}&hide_border=${HIDE_BORDER}&border_radius=${BORDER_RADIUS}&cachebuster=${GITHUB_RUN_ID}"
+          curl --fail --silent --show-error --location \
+               --retry 5 --retry-delay 5 --retry-connrefused \
+               -o /tmp/streak1.svg "$URL"
+          if [ -s /tmp/streak1.svg ] && grep -qi "<svg" /tmp/streak1.svg; then
             echo "ok=true" >> $GITHUB_OUTPUT
+            cp /tmp/streak1.svg /tmp/streak.svg
+          else
+            echo "ok=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: Commit update if content changed
-        if: steps.fetch.outputs.ok == 'true'
+      - name: Fallback attempt
+        if: steps.primary.outputs.ok != 'true'
+        id: fallback
+        shell: bash
         run: |
-          # Only replace if new content differs from cached file
-          if [ ! -f assets/streak.svg ] || ! cmp -s /tmp/streak.svg assets/streak.svg; then
-            mv /tmp/streak.svg assets/streak.svg
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add assets/streak.svg
-            git commit -m "chore(readme): refresh streak.svg"
+          URL2="https://streak-stats.demolab.com/?user=${USERNAME}&theme=${THEME}&hide_border=${HIDE_BORDER}&border_radius=${BORDER_RADIUS}&cachebuster=$RANDOM$RANDOM"
+          curl --fail --silent --show-error --location \
+               --retry 5 --retry-delay 5 --retry-connrefused \
+               -o /tmp/streak2.svg "$URL2" || true
+          if [ -s /tmp/streak2.svg ] && grep -qi "<svg" /tmp/streak2.svg; then
+            echo "ok=true" >> $GITHUB_OUTPUT
+            cp /tmp/streak2.svg /tmp/streak.svg
           else
-            echo "No changes in streak.svg"
+            echo "ok=false" >> $GITHUB_OUTPUT
           fi
+
+      - name: Replace cached file on success
+        if: steps.primary.outputs.ok == 'true' || steps.fallback.outputs.ok == 'true'
+        shell: bash
+        run: |
+          mv /tmp/streak.svg assets/streak.svg
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/streak.svg
+          git commit -m "chore: refresh streak.svg ($(date -u +'%Y-%m-%d %H:%M UTC'))" || echo "No diff to commit"
 
       - name: Push to default branch
-        if: steps.fetch.outputs.ok == 'true'
+        if: steps.primary.outputs.ok == 'true' || steps.fallback.outputs.ok == 'true'
+        shell: bash
         run: |
-          # Auto-detect default branch (main/master)
-          BRANCH=$(git symbolic-ref --short refs/remotes/origin/HEAD | sed 's@^origin/@@')
-          git push origin HEAD:${BRANCH}
+          BRANCH="${{ steps.branch.outputs.default }}"
+          git push origin "HEAD:${BRANCH}"
+
+      - name: Debug (only if both attempts failed)
+        if: steps.primary.outputs.ok != 'true' && steps.fallback.outputs.ok != 'true'
+        shell: bash
+        run: |
+          echo "Both fetch attempts failed. Keeping previous assets/streak.svg (fail-safe)."
+          ls -l assets || true
