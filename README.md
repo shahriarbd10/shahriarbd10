@@ -20,7 +20,7 @@
 
 <div align="center">
   <img src="https://img.shields.io/badge/Location-Dhaka%2C%20Bangladesh-0ea5e9?style=for-the-badge&logo=google-maps&logoColor=white"/>
-  <a href="https://shahriarbd10.github.io"><img src="https://img.shields.io/badge/Portfolio-shahriarbd10.github.io-a855f7?style=for-the-badge&logo=google-chrome&logoColor=white"/></a>
+  <a href="https://shahriarbd10.github.io"><img src="https://img.shields.io/badge/Portfolio-shahriarbd.com-a855f7?style=for-the-badge&logo=google-chrome&logoColor=white"/></a>
   <a href="mailto:shahriarsgr@gmail.com"><img src="https://img.shields.io/badge/Email-Contact-ef4444?style=for-the-badge&logo=gmail&logoColor=white"/></a>
 </div>
 
