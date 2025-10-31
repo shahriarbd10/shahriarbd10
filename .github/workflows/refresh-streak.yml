@@ -2,8 +2,8 @@ name: Refresh Streak Card (Fail-Safe)
 
 on:
   schedule:
-    # Daily at 01:12 UTC → 07:12 Dhaka (UTC+6)
-    - cron: "12 1 * * *"
+    # 00:00 Dhaka (UTC+6) → 18:00 UTC daily
+    - cron: "0 18 * * *"
   workflow_dispatch:
 
 permissions:
@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       USERNAME: shahriarbd10
-      # Edit visual params if you like:
+      # Customize visual params if desired:
       THEME: radical
       HIDE_BORDER: "true"
       BORDER_RADIUS: "12"
@@ -30,14 +30,11 @@ jobs:
         id: branch
         shell: bash
         run: |
-          # Try read from event context first
           DEF="${{ github.event.repository.default_branch }}"
           if [ -z "$DEF" ]; then
-            # Fallback via origin/HEAD
             git fetch --quiet origin
             DEF=$(git symbolic-ref --short refs/remotes/origin/HEAD 2>/dev/null | sed 's@^origin/@@')
           fi
-          # Final fallback
           if [ -z "$DEF" ]; then
             if git rev-parse --verify origin/main >/dev/null 2>&1; then DEF=main;
             elif git rev-parse --verify origin/master >/dev/null 2>&1; then DEF=master;
@@ -48,7 +45,7 @@ jobs:
       - name: Ensure assets folder
         run: mkdir -p assets
 
-      - name: Try primary source (with retry + cache-buster)
+      - name: Try primary source (retry + cache-buster)
         id: primary
         continue-on-error: true
         shell: bash
@@ -64,7 +61,7 @@ jobs:
             echo "ok=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: Fallback attempt
+      - name: Fallback attempt (if primary failed)
         if: steps.primary.outputs.ok != 'true'
         id: fallback
         shell: bash
