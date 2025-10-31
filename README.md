@@ -109,7 +109,7 @@ An AI-powered chatbot simplifying legal workflow and documentation.
   <a href="mailto:shahriarsgr@gmail.com"><img src="https://img.shields.io/badge/Email-ef4444?style=for-the-badge&logo=gmail&logoColor=white"/></a>
   <a href="https://linkedin.com/in/shahriarhossain"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
   <a href="https://github.com/shahriarbd10"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
-  <a href="https://shahriarbd10.github.io"><img src="https://img.shields.io/badge/Portfolio-0ea5e9?style=for-the-badge&logo=google-chrome&logoColor=white"/></a>
+  <a href="https://shahriarbd.com"><img src="https://img.shields.io/badge/Portfolio-0ea5e9?style=for-the-badge&logo=google-chrome&logoColor=white"/></a>
 </div>
 
 ---
