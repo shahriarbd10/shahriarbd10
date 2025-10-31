@@ -73,7 +73,7 @@ An AI-powered chatbot simplifying legal workflow and documentation.
 ## 📊 GitHub Analytics
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=shahriarbd10&show_icons=true&theme=radical&hide_border=true&border_radius=12" height="150" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=shahriarbd10&theme=radical&hide_border=true&border_radius=12" height="150" />
+  <img src="./assets/streak.svg" alt="GitHub Streak" height="150" />
 </div>
 
 ---
