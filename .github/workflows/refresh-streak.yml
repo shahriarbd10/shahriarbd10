@@ -1,0 +1,60 @@
+name: Refresh Streak Card (Fail-Safe)
+
+on:
+  schedule:
+    # Daily at 01:10 UTC → 07:10 Dhaka (UTC+6)
+    - cron: "10 1 * * *"
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # needed to push the updated SVG
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Ensure assets folder
+        run: mkdir -p assets
+
+      - name: Download latest streak.svg
+        id: fetch
+        run: |
+          # Customize your look here (theme, border, etc.)
+          BASE="https://streak-stats.demolab.com"
+          QUERY="user=shahriarbd10&theme=radical&hide_border=true&border_radius=12"
+          # Add a cache-buster to avoid stale CDN responses
+          BUSTER="cachebuster=${GITHUB_RUN_ID}"
+          URL="${BASE}/?${QUERY}&${BUSTER}"
+
+          # Download to temp and sanity-check
+          curl -sS -L -o /tmp/streak.svg "${URL}"
+
+          if [ ! -s /tmp/streak.svg ] || ! grep -qi "<svg" /tmp/streak.svg; then
+            echo "ok=false" >> $GITHUB_OUTPUT
+            echo "⚠️  Download failed or not an SVG. Keeping previous cached file."
+          else
+            echo "ok=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit update if content changed
+        if: steps.fetch.outputs.ok == 'true'
+        run: |
+          # Only replace if new content differs from cached file
+          if [ ! -f assets/streak.svg ] || ! cmp -s /tmp/streak.svg assets/streak.svg; then
+            mv /tmp/streak.svg assets/streak.svg
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add assets/streak.svg
+            git commit -m "chore(readme): refresh streak.svg"
+          else
+            echo "No changes in streak.svg"
+          fi
+
+      - name: Push to default branch
+        if: steps.fetch.outputs.ok == 'true'
+        run: |
+          # Auto-detect default branch (main/master)
+          BRANCH=$(git symbolic-ref --short refs/remotes/origin/HEAD | sed 's@^origin/@@')
+          git push origin HEAD:${BRANCH}
