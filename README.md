@@ -1,5 +1,5 @@
 <!-- Profile README for shahriarbd10 -->
-<!--let's gp -->
+<!--let's go -->
 
 <div align="center">
   <svg viewBox="0 0 1200 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shahriar Hossain (shahriarbd10) — Full Stack Developer | Tech Enthusiast" style="width:100%;height:auto;max-height:220px;">
@@ -43,7 +43,7 @@ I love exploring emerging technologies and turning ideas into real, functional a
 
 ## ⚙️ Tech Stack
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=js,ts,react,nextjs,nodejs,express,mongodb,python,flutter,dart,aws,nginx,arduino,git,vscode" />
+  <img src="https://skillicons.dev/icons?i=js,ts,react,nextjs,nodejs,express,mongodb,php,mysql,python,flutter,dart,aws,nginx,arduino,git,vscode" />
 </div>
 
 ---
