@@ -2,7 +2,11 @@ name: Refresh Streak Card (Fail-Safe)
 
 on:
   schedule:
-    # 00:00 Dhaka (UTC+6) → 18:00 UTC daily
+    # 12:00 PM Dhaka (UTC+6 → 06:00 UTC)
+    - cron: "0 6 * * *"
+    # 6:00 PM Dhaka (UTC+6 → 12:00 UTC)
+    - cron: "0 12 * * *"
+    # 12:00 AM Dhaka (UTC+6 → 18:00 UTC)
     - cron: "0 18 * * *"
   workflow_dispatch:
 
@@ -18,12 +22,11 @@ jobs:
     runs-on: ubuntu-latest
     env:
       USERNAME: shahriarbd10
-      # Customize visual params if desired:
       THEME: radical
       HIDE_BORDER: "true"
       BORDER_RADIUS: "12"
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Determine default branch (with fallback)
@@ -42,7 +45,7 @@ jobs:
           fi
           echo "default=$DEF" >> "$GITHUB_OUTPUT"
 
-      - name: Ensure assets folder
+      - name: Ensure assets folder exists
         run: mkdir -p assets
 
       - name: Try primary source (retry + cache-buster)
@@ -51,8 +54,9 @@ jobs:
         shell: bash
         run: |
           URL="https://streak-stats.demolab.com/?user=${USERNAME}&theme=${THEME}&hide_border=${HIDE_BORDER}&border_radius=${BORDER_RADIUS}&cachebuster=${GITHUB_RUN_ID}"
+          echo "Fetching: $URL"
           curl --fail --silent --show-error --location \
-               --retry 5 --retry-delay 5 --retry-connrefused \
+               --retry 5 --retry-delay 10 --retry-connrefused \
                -o /tmp/streak1.svg "$URL"
           if [ -s /tmp/streak1.svg ] && grep -qi "<svg" /tmp/streak1.svg; then
             echo "ok=true" >> $GITHUB_OUTPUT
@@ -66,9 +70,10 @@ jobs:
         id: fallback
         shell: bash
         run: |
+          echo "Primary fetch failed — attempting fallback."
           URL2="https://streak-stats.demolab.com/?user=${USERNAME}&theme=${THEME}&hide_border=${HIDE_BORDER}&border_radius=${BORDER_RADIUS}&cachebuster=$RANDOM$RANDOM"
           curl --fail --silent --show-error --location \
-               --retry 5 --retry-delay 5 --retry-connrefused \
+               --retry 5 --retry-delay 10 --retry-connrefused \
                -o /tmp/streak2.svg "$URL2" || true
           if [ -s /tmp/streak2.svg ] && grep -qi "<svg" /tmp/streak2.svg; then
             echo "ok=true" >> $GITHUB_OUTPUT
@@ -99,5 +104,5 @@ jobs:
         if: steps.primary.outputs.ok != 'true' && steps.fallback.outputs.ok != 'true'
         shell: bash
         run: |
-          echo "Both fetch attempts failed. Keeping previous assets/streak.svg (fail-safe)."
+          echo "❌ Both fetch attempts failed. Keeping previous assets/streak.svg (fail-safe)."
           ls -l assets || true
