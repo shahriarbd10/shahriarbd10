@@ -92,7 +92,7 @@ An AI-powered chatbot simplifying legal workflow and documentation.
 ## 🧩 Highlights
 - Built **full-stack dashboards** with performance and modern UI/UX  
 - Integrated **ESP32** data into real-time monitoring systems  
-- **CTO at Xfishery** — managing cloud and data architecture  
+- **Jr. Developer at Xfishery** — managing cloud and data architecture  
 - **Co-Founder at Lex.Ai** — developing backend and API logic (prototype)  
 - Always **curious**, learning, and exploring emerging technologies  
 
