@@ -43,7 +43,8 @@ I love exploring emerging technologies and turning ideas into real, functional a
 
 ## ⚙️ Tech Stack
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=js,ts,react,nextjs,nodejs,express,mongodb,php,mysql,python,flutter,dart,aws,nginx,arduino,git,vscode" />
+  <img src="https://skillicons.dev/icons?i=js,ts,react,nextjs,nodejs,express,mongodb,php,mysql" /><br/>
+  <img src="https://skillicons.dev/icons?i=python,flutter,dart,aws,nginx,arduino,git,vscode,html" />
 </div>
 
 ---
