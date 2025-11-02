@@ -58,7 +58,7 @@ An intelligent monitoring platform built for aquaculture management — connecti
 
 ---
 
-### 💊 [MediTrack Pharmacy SaaS](https://meditrack-v1.vercel.app)  
+### 💊 [MediTrack Pharmacy SaaS](https://meditrack.shahriarbd.com)  
 A full-stack SaaS for pharmacies — inventory, invoicing, analytics, and access management.  
 **Stack:** MERN Stack • JWT Auth • Cloud APIs • Nginx HTTPS  
 
