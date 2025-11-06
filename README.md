@@ -74,7 +74,7 @@ An AI-powered chatbot simplifying legal workflow and documentation.
 ## 📊 GitHub Analytics
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=shahriarbd10&show_icons=true&theme=radical&hide_border=true&border_radius=12" height="150" />
-  <img src="./assets/streak.svg" alt="GitHub Streak" height="150" />
+  <img src="https://raw.githubusercontent.com/shahriarbd10/shahriarbd10/main/assets/streak.svg?t=1" alt="GitHub Streak" height="150" />
 </div>
 
 ---
@@ -94,7 +94,7 @@ An AI-powered chatbot simplifying legal workflow and documentation.
 - Built **full-stack dashboards** with performance and modern UI/UX  
 - Integrated **ESP32** data into real-time monitoring systems  
 - **Jr. Developer at Xfishery** — managing cloud and data architecture  
-- **Co-Founder at Lex.Ai** — Developing Ai-featured Legal Assist Platform 
+- **Co-Founder at Lex.Ai** — Developing Ai-featured Legal Assist Platform  
 - Always **curious**, learning, and exploring emerging technologies  
 
 ---
