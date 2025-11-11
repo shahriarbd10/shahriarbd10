@@ -1,0 +1,107 @@
+#backup streak 
+
+
+name: Refresh Streak Card (Fail-Safe)
+
+on:
+  schedule:
+    # Every 2 hours (UTC)
+    - cron: "0 */2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-streak
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    env:
+      USERNAME: shahriarbd10
+      THEME: radical
+      HIDE_BORDER: "true"
+      BORDER_RADIUS: "12"
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Determine default branch (with fallback)
+        id: branch
+        shell: bash
+        run: |
+          DEF="${{ github.event.repository.default_branch }}"
+          if [ -z "$DEF" ]; then
+            git fetch --quiet origin
+            DEF=$(git symbolic-ref --short refs/remotes/origin/HEAD 2>/dev/null | sed 's@^origin/@@')
+          fi
+          if [ -z "$DEF" ]; then
+            if git rev-parse --verify origin/main >/dev/null 2>&1; then DEF=main;
+            elif git rev-parse --verify origin/master >/dev/null 2>&1; then DEF=master;
+            else DEF=main; fi
+          fi
+          echo "default=$DEF" >> "$GITHUB_OUTPUT"
+
+      - name: Ensure assets folder exists
+        run: mkdir -p assets
+
+      - name: Try primary source (retry + cache-buster)
+        id: primary
+        continue-on-error: true
+        shell: bash
+        run: |
+          URL="https://streak-stats.demolab.com/?user=${USERNAME}&theme=${THEME}&hide_border=${HIDE_BORDER}&border_radius=${BORDER_RADIUS}&cachebuster=${GITHUB_RUN_ID}"
+          echo "Fetching: $URL"
+          curl --fail --silent --show-error --location \
+               --retry 5 --retry-delay 10 --retry-connrefused \
+               -o /tmp/streak1.svg "$URL"
+          if [ -s /tmp/streak1.svg ] && grep -qi "<svg" /tmp/streak1.svg; then
+            echo "ok=true" >> $GITHUB_OUTPUT
+            cp /tmp/streak1.svg /tmp/streak.svg
+          else
+            echo "ok=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Fallback attempt (if primary failed)
+        if: steps.primary.outputs.ok != 'true'
+        id: fallback
+        shell: bash
+        run: |
+          echo "Primary fetch failed — attempting fallback."
+          URL2="https://streak-stats.demolab.com/?user=${USERNAME}&theme=${THEME}&hide_border=${HIDE_BORDER}&border_radius=${BORDER_RADIUS}&cachebuster=$RANDOM$RANDOM"
+          curl --fail --silent --show-error --location \
+               --retry 5 --retry-delay 10 --retry-connrefused \
+               -o /tmp/streak2.svg "$URL2" || true
+          if [ -s /tmp/streak2.svg ] && grep -qi "<svg" /tmp/streak2.svg; then
+            echo "ok=true" >> $GITHUB_OUTPUT
+            cp /tmp/streak2.svg /tmp/streak.svg
+          else
+            echo "ok=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Replace cached file on success
+        if: steps.primary.outputs.ok == 'true' || steps.fallback.outputs.ok == 'true'
+        shell: bash
+        run: |
+          mv /tmp/streak.svg assets/streak.svg
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/streak.svg
+          git commit -m "chore: refresh streak.svg ($(date -u +'%Y-%m-%d %H:%M UTC'))" || echo "No diff to commit"
+
+      - name: Push to default branch
+        if: steps.primary.outputs.ok == 'true' || steps.fallback.outputs.ok == 'true'
+        shell: bash
+        run: |
+          BRANCH="${{ steps.branch.outputs.default }}"
+          git push origin "HEAD:${BRANCH}"
+
+      - name: Debug (only if both attempts failed)
+        if: steps.primary.outputs.ok != 'true' && steps.fallback.outputs.ok != 'true'
+        shell: bash
+        run: |
+          echo "❌ Both fetch attempts failed. Keeping previous assets/streak.svg (fail-safe)."
+          ls -l assets || true
