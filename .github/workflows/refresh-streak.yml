@@ -2,12 +2,8 @@ name: Refresh Streak Card (Fail-Safe)
 
 on:
   schedule:
-    # 12:00 PM Dhaka (UTC+6 → 06:00 UTC)
-    - cron: "0 6 * * *"
-    # 6:00 PM Dhaka (UTC+6 → 12:00 UTC)
-    - cron: "0 12 * * *"
-    # 12:00 AM Dhaka (UTC+6 → 18:00 UTC)
-    - cron: "0 18 * * *"
+    # Every 2 hours (UTC)
+    - cron: "0 */2 * * *"
   workflow_dispatch:
 
 permissions:
