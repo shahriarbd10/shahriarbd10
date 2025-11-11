@@ -83,11 +83,24 @@ jobs:
         shell: bash
         run: |
           mv /tmp/streak.svg assets/streak.svg
+
+      - name: Bump README cache param (forces fresh fetch)
+        if: steps.primary.outputs.ok == 'true' || steps.fallback.outputs.ok == 'true'
+        shell: bash
+        run: |
+          TS=$(date -u +%Y%m%d%H%M)
+          # Update any occurrences of assets/streak.svg or assets/streak.svg?t=...
+          sed -E -i 's#(assets/streak\.svg)(\?t=[0-9]+)?#\1?t='"$TS"'#g' README.md || true
+
+      - name: Commit changes
+        if: steps.primary.outputs.ok == 'true' || steps.fallback.outputs.ok == 'true'
+        shell: bash
+        run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/streak.svg
-          git commit -m "chore: refresh streak.svg ($(date -u +'%Y-%m-%d %H:%M UTC'))" || echo "No diff to commit"
+          git add assets/streak.svg README.md || true
+          git commit -m "chore: refresh streak.svg & bump cache ($(date -u +'%Y-%m-%d %H:%M UTC'))" || echo "No diff to commit"
 
       - name: Push to default branch
         if: steps.primary.outputs.ok == 'true' || steps.fallback.outputs.ok == 'true'
