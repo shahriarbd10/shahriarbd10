@@ -73,7 +73,7 @@ An AI-powered chatbot simplifying legal workflow and documentation.
 
 ## 📊 GitHub Analytics
 <div align="center">
-  <img src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=shahriarbd10&show_icons=true&theme=radical&hide_border=true&border_radius=12&cache_seconds=21600" height="150" />
+  <img src="https://metrics.lecoq.io/shahriarbd10?template=classic&base.header=0&base.activity=0&base.community=0&base.repositories=0&base.metadata=0&config.timezone=Asia%2FDhaka" height="150" />
   <!-- cache-bumped by workflow -->
   <img src="https://raw.githubusercontent.com/shahriarbd10/shahriarbd10/main/assets/streak.svg?t=202603030411" alt="GitHub Streak" height="150" />
 </div>
@@ -109,7 +109,7 @@ An AI-powered chatbot simplifying legal workflow and documentation.
 ## 🌐 Connect With Me
 <div align="center">
   <a href="mailto:shahriarsgr@gmail.com"><img src="https://img.shields.io/badge/Email-ef4444?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-  <a href="https://linkedin.com/in/shahriarbd10"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+  <a href="https://linkedin.com/in/shahriarhossain"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
   <a href="https://github.com/shahriarbd10"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
   <a href="https://shahriarbd.com"><img src="https://img.shields.io/badge/Portfolio-0ea5e9?style=for-the-badge&logo=google-chrome&logoColor=white"/></a>
 </div>
