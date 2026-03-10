@@ -75,7 +75,7 @@ An AI-powered chatbot simplifying legal workflow and documentation.
 <div align="center">
   <img src="https://metrics.lecoq.io/shahriarbd10?template=classic&base.header=0&base.activity=0&base.community=0&base.repositories=0&base.metadata=0&config.timezone=Asia%2FDhaka" height="150" />
   <!-- cache-bumped by workflow -->
-  <img src="https://raw.githubusercontent.com/shahriarbd10/shahriarbd10/main/assets/streak.svg?t=202603100642" alt="GitHub Streak" height="150" />
+  <img src="https://raw.githubusercontent.com/shahriarbd10/shahriarbd10/main/assets/streak.svg?t=202603100835" alt="GitHub Streak" height="150" />
 </div>
 
 ---
