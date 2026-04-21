@@ -2,52 +2,7 @@
 <!--let's go -->
 
 <div align="center">
-  <svg viewBox="0 0 1200 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shahriar Hossain profile banner" style="width:100%;height:auto;max-height:320px;">
-    <defs>
-      <linearGradient id="topBg" x1="0" x2="1" y1="0" y2="1">
-        <stop offset="0%" stop-color="#07111f" />
-        <stop offset="50%" stop-color="#0f2a44" />
-        <stop offset="100%" stop-color="#28104a" />
-      </linearGradient>
-      <radialGradient id="glowA" cx="30%" cy="20%" r="55%">
-        <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.85" />
-        <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
-      </radialGradient>
-      <radialGradient id="glowB" cx="78%" cy="25%" r="50%">
-        <stop offset="0%" stop-color="#a855f7" stop-opacity="0.9" />
-        <stop offset="100%" stop-color="#a855f7" stop-opacity="0" />
-      </radialGradient>
-      <linearGradient id="windowGrad" x1="0" x2="1" y1="0" y2="0">
-        <stop offset="0%" stop-color="#f8fafc" />
-        <stop offset="100%" stop-color="#dbeafe" />
-      </linearGradient>
-    </defs>
-    <rect width="1200" height="320" rx="28" fill="url(#topBg)" />
-    <rect width="1200" height="320" rx="28" fill="url(#glowA)" />
-    <rect width="1200" height="320" rx="28" fill="url(#glowB)" />
-    <circle cx="140" cy="70" r="42" fill="#0ea5e9" fill-opacity="0.18" />
-    <circle cx="1060" cy="258" r="66" fill="#a855f7" fill-opacity="0.14" />
-    <rect x="315" y="58" width="760" height="205" rx="18" fill="url(#windowGrad)" />
-    <rect x="315" y="58" width="760" height="26" rx="18" fill="#e5e7eb" />
-    <circle cx="340" cy="71" r="5" fill="#ef4444" />
-    <circle cx="358" cy="71" r="5" fill="#f59e0b" />
-    <circle cx="376" cy="71" r="5" fill="#22c55e" />
-    <text x="408" y="76" fill="#64748b" font-size="14" font-weight="700">shahriarbd10/profile.tsx</text>
-    <rect x="70" y="82" width="190" height="58" rx="29" fill="#1d4ed8" fill-opacity="0.72" stroke="#93c5fd" stroke-opacity="0.35" />
-    <circle cx="107" cy="111" r="20" fill="#f8fafc" />
-    <text x="138" y="106" fill="#ffffff" font-size="20" font-weight="800">Shahriar</text>
-    <text x="138" y="126" fill="#dbeafe" font-size="14">@shahriarbd10</text>
-    <text x="345" y="122" fill="#22c55e" font-size="24" font-weight="700">Empowering ideas with scalable software.</text>
-    <text x="345" y="162" fill="#7c3aed" font-size="23" font-weight="700">const</text>
-    <text x="410" y="162" fill="#0f172a" font-size="23" font-weight="700">buildImpact = () =&gt; {'{'}</text>
-    <text x="385" y="197" fill="#0f172a" font-size="20">designReliableProducts();</text>
-    <text x="735" y="197" fill="#475569" font-size="19">// SaaS, dashboards, cloud</text>
-    <text x="385" y="228" fill="#0f172a" font-size="20">connectRealtimeSystems();</text>
-    <text x="760" y="228" fill="#475569" font-size="19">// IoT, MQTT, live data</text>
-    <text x="385" y="259" fill="#0f172a" font-size="20">keepLearningEveryDay();</text>
-    <text x="727" y="259" fill="#475569" font-size="19">// AI, backend scale, UX</text>
-    <text x="345" y="288" fill="#0f172a" font-size="23" font-weight="700">{'}'}</text>
-  </svg>
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=280&color=0:0ea5e9,50:2563eb,100:a855f7&text=Shahriar%20Hossain&fontColor=ffffff&fontSize=44&fontAlignY=40&desc=Full%20Stack%20Developer%20%7C%20Real-time%20Systems%20%7C%20Cloud%20Learner&descAlignY=58&animation=fadeIn" alt="Shahriar Hossain profile banner" width="100%" />
 </div>
 
 <div align="center">
