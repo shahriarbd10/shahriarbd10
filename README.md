@@ -39,12 +39,60 @@ I love exploring emerging technologies and turning ideas into real, functional a
 - Real-time data integration and automation  
 - Learning, debugging, and optimizing performance  
 
+## Current Focus
+<div align="left">
+  <ul>
+    <li>Building real-time monitoring products for aquaculture and operations dashboards</li>
+    <li>Shipping full-stack SaaS features across frontend, backend, and cloud infrastructure</li>
+    <li>Exploring AI-assisted experiences for products like Lex.Ai and future workflow tools</li>
+    <li>Strengthening cloud automation, backend scalability, and performance optimization</li>
+  </ul>
+</div>
+
 ---
 
 ## ⚙️ Tech Stack
 <div align="center">
   <img src="https://skillicons.dev/icons?i=js,ts,react,nextjs,nodejs,express,mongodb,php,mysql" /><br/>
   <img src="https://skillicons.dev/icons?i=python,flutter,dart,aws,nginx,arduino,git,vscode,html" />
+</div>
+
+### Technical Skills Snapshot
+
+**Languages & Core**
+
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+
+**Frontend**
+
+![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat&logo=flutter&logoColor=white)
+
+**Backend & Data**
+
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=flat&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
+![REST APIs](https://img.shields.io/badge/REST_APIs-02569B?style=flat)
+![WebSockets](https://img.shields.io/badge/WebSockets-010101?style=flat&logo=socketdotio&logoColor=white)
+![MQTT](https://img.shields.io/badge/MQTT-660066?style=flat&logo=eclipsemosquitto&logoColor=white)
+
+**Cloud & Tools**
+
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazonaws&logoColor=white)
+![Nginx](https://img.shields.io/badge/Nginx-269539?style=flat&logo=nginx&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
+![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat&logo=arduino&logoColor=white)
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/54dc1f7a-f327-43ab-ae9c-58c7421eee39" alt="Technical skills pixel art workspace" width="100%" />
 </div>
 
 ---
