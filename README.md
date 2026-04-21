@@ -2,6 +2,10 @@
 <!--let's go -->
 
 <div align="center">
+  <img src="https://github.com/user-attachments/assets/43a8141c-1e7d-4754-b6d7-39af6b79864e" alt="GitHub banner showcasing a professional profile" width="100%" />
+</div>
+
+<div align="center">
   <svg viewBox="0 0 1200 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shahriar Hossain (shahriarbd10) — Full Stack Developer | Tech Enthusiast" style="width:100%;height:auto;max-height:220px;">
     <defs>
       <linearGradient id="bgGrad" x1="0" x2="1" y1="0" y2="0">
