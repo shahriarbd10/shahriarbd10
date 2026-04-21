@@ -125,9 +125,23 @@ An AI-powered chatbot simplifying legal workflow and documentation.
 
 ## 📊 GitHub Analytics
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=shahriarbd10&show_icons=true&hide_border=true&rank_icon=github" alt="GitHub stats" height="150" />
+  <img src="https://github-readme-stats.vercel.app/api?username=shahriarbd10&show_icons=true&hide_border=true&rank_icon=github&theme=tokyonight" alt="GitHub stats" height="150" />
   <!-- cache-bumped by workflow -->
   <img src="https://raw.githubusercontent.com/shahriarbd10/shahriarbd10/main/assets/streak.svg?t=202604210803" alt="GitHub Streak" height="150" />
+</div>
+
+---
+
+## 🧠 Most Used Languages
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=shahriarbd10&layout=compact&hide_border=true&theme=tokyonight" alt="Top languages" height="165" />
+</div>
+
+---
+
+## 🏆 GitHub Trophies
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=shahriarbd10&theme=tokyonight&no-frame=true&no-bg=true&row=1&column=6" alt="GitHub trophies" width="100%" />
 </div>
 
 ---
