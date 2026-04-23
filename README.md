@@ -15,9 +15,6 @@
     </defs>
     <rect width="1200" height="220" fill="url(#bgGrad)"/>
     <path d="M0,150 C240,190 460,110 720,150 C980,190 1100,120 1200,160 L1200,220 L0,220 Z" fill="rgba(255,255,255,0.1)"/>
-    <text x="50%" y="100" text-anchor="middle" fill="#fff" font-size="40" font-weight="800">Shahriar Hossain</text>
-    <text x="50%" y="135" text-anchor="middle" fill="#e2e8f0" font-size="18">(shahriarbd10)</text>
-    <text x="50%" y="168" text-anchor="middle" fill="#f9fafb" font-size="15">Full Stack Developer | Tech Enthusiast | Cloud Learner</text>
   </svg>
   <hr style="border: 0; height: 1px; background: linear-gradient(90deg, #0ea5e9, #a855f7, #0ea5e9); margin: 20px 0; width: 60%;">
 </div>
