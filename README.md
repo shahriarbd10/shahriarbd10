@@ -138,7 +138,7 @@ An AI-powered chatbot simplifying legal workflow and documentation.
 
 ## 🏆 GitHub Trophies
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=shahriarbd10&theme=tokyonight&no-frame=true&no-bg=true&row=1&column=6" alt="GitHub trophies" width="100%" />
+  <img src="https://github-profile-trophy.screw-hand.vercel.app/?username=shahriarbd10&theme=tokyonight&no-frame=true&no-bg=true&row=1&column=6" alt="GitHub trophies" width="100%" />
 </div>
 
 ---
