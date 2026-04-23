@@ -124,7 +124,7 @@ An AI-powered chatbot simplifying legal workflow and documentation.
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=shahriarbd10&show_icons=true&hide_border=true&rank_icon=github&theme=tokyonight" alt="GitHub stats" height="150" />
   <!-- cache-bumped by workflow -->
-  <img src="https://raw.githubusercontent.com/shahriarbd10/shahriarbd10/main/assets/streak.svg?t=202604231317" alt="GitHub Streak" height="150" />
+  <img src="https://raw.githubusercontent.com/shahriarbd10/shahriarbd10/main/assets/streak.svg?t=202604231548" alt="GitHub Streak" height="150" />
 </div>
 
 ---
