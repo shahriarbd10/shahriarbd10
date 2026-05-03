@@ -132,7 +132,7 @@ A prototype **AI legal assistant** for legal workflow automation, document suppo
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=shahriarbd10&show_icons=true&hide_border=true&rank_icon=github&theme=tokyonight" alt="Shahriar Hossain GitHub stats for shahriarbd10" height="150" />
   <!-- cache-bumped by workflow -->
-  <img src="https://raw.githubusercontent.com/shahriarbd10/shahriarbd10/main/assets/streak.svg?t=202605030623" alt="Shahriar Hossain GitHub contribution streak" height="150" />
+  <img src="https://raw.githubusercontent.com/shahriarbd10/shahriarbd10/main/assets/streak.svg?t=202605030918" alt="Shahriar Hossain GitHub contribution streak" height="150" />
 </div>
 
 ---
